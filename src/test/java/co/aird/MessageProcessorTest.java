@@ -66,6 +66,7 @@ public class MessageProcessorTest {
             messageProcessor.processMessage(message);
         }
 
+        assertTrue(new String(out.toByteArray()).contains("Application has now processed 50 messages - shutting down."));
         assertTrue(new String(out.toByteArray()).trim().endsWith("Add 0.00 to apple's value"));
     }
 }

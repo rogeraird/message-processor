@@ -34,6 +34,7 @@ public class MessageProcessor {
         }
 
         if (messageCount % 50 == 0) {
+            outputStream.println("Application has now processed 50 messages - shutting down.");
             processAdjustments();
             exiter.exit();
         }
